@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/681/371/original/dark-purple-gradient-fluid-abstract-shapes-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(231, 210, 210);
+}
+
+.input-container {
+    background-color: #58015B;
+    width: 100%;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    border-bottom: .3rem solid #3B2042;
+}
+
+.input-container input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    color: yellow;
+}
+
+.input-container input::placeholder {
+    color: rgb(166, 166, 126);
+}
+
+.input-container button {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: aqua;
+    top: .4rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.content {
+    background-color: #58015B;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: white;
+    border-bottom: .3rem solid #3B2042;
+}
+
+.password-length {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length {
+    color: yellow;
+    font-weight: 600;
+}
+
+.strength-indicator {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+
+.indicator {
+    width: 1.7rem;
+    height: 1.7rem;
+    box-shadow: 0px 0px 25px 0px gray;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.btn {
+    width: 100%;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: #A629C2;
+    color: yellow;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-bottom: .3rem solid yellow;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.options input {
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: .1rem solid cyan;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.options input:checked {
+    background-color: cyan;
+}
+
+.options input:checked::before {
+    content: '🗸';
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: absolute;
+    top: -5px;
+}
+
+.content input[type=range] {
+    position: relative;
+    appearance: none;
+    background: rgb(174, 188, 34);
+    background: linear-gradient(129deg, rgba(174, 188, 34, 1) 0%, rgba(183, 38, 174, 1) 0%, rgba(198, 27, 176, 1) 29%, rgba(255, 0, 236, 1) 100%, rgba(110, 31, 174, 1) 100%);
+    background-color: #3C0C49;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    width: 100%;
+    height: 1rem;
+}
+
+.slider::-webkit-slider-thumb {
+    position: relative;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0px 0px 20px 0px yellow;
+}
+
+.slider:focus {
+    outline: 3px solid yellow;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background-color: black;
+    outline: 3px solid yellow;
+}
+
+.msg {
+    position: absolute;
+    background-color: #A629C2;
+    padding: .6rem;
+    border-radius: 1rem;
+    top: -1.6rem;
+    right: -0.5rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .3s ease-in;
+    color: yellow;
+    font-weight: 600;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1);
+}
